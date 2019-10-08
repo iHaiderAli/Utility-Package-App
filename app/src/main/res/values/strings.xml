@@ -24,5 +24,15 @@
     <string name="url">www.google.com</string>
     <string name="phoneHint" tools:ignore="Typos">Phone (xxx xxx xxxx)</string>
     <string name="submit">SUBMIT</string>
+    <string name="success">Success</string>
+    <string name="enterUserName">Please enter user name</string>
+    <string name="validUsername">Please enter atleast 3 characters</string>
+    <string name="enterEmail">Please enter an email</string>
+    <string name="validEmail">Please enter a valid email</string>
+    <string name="enterPhoneNo">Please enter a valid phone no</string>
+    <string name="validPhoneNo">Please enter a valid url</string>
+    <string name="enterUrl">Please enter a url</string>
+    <string name="validUrl">Please enter a valid url</string>
+    <string name="goText">Go for examples</string>
 
 </resources>

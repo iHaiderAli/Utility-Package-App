@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,17 +58,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     }
 
-    @Override
-    public void onClick(View view) {
-
-        if (view.getId() == R.id.submitData) {
-            dataValidation();
-        } else if (view.getId() == R.id.addProfileImage) {
-            openCameraGallery();
-        }
-
-    }
-
     private void dataValidation() {
 
         int result = DataValidation.isValidInput(userName.getText().toString().trim());
@@ -76,23 +66,27 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         boolean validUrl = DataValidation.isValidUrl(companyAddress.getText().toString().trim());
 
         if (result == 1) {
-            userName.setError("Please enter user name");
+            userName.setError(getResources().getString(R.string.enterUserName));
         } else if (result == 2) {
-            userName.setError("Please enter atleast 3 characters");
+            userName.setError(getResources().getString(R.string.validUsername));
+        } else if (TextUtils.isEmpty(userEmail.getText().toString().trim())) {
+            userEmail.setError(getResources().getString(R.string.enterEmail));
         } else if (!validEmail) {
-            userEmail.setError("Please enter a valid email");
+            userEmail.setError(getResources().getString(R.string.validEmail));
         } else if (!validPhoneNumber) {
-            userPhoneNo.setError("Please enter a valid phone no");
+            userPhoneNo.setError(getResources().getString(R.string.validPhoneNo));
+        } else if (TextUtils.isEmpty(userPhoneNo.getText().toString().trim())) {
+            userPhoneNo.setError(getResources().getString(R.string.enterPhoneNo));
+        } else if (TextUtils.isEmpty(companyAddress.getText().toString().trim())) {
+            companyAddress.setError(getResources().getString(R.string.validUrl));
         } else if (!validUrl) {
-            companyAddress.setError("Please enter a valid url");
+            companyAddress.setError(getResources().getString(R.string.enterUrl));
         } else {
-
-            Message.showMessage(this, "Success");
-
+            Message.showMessage(this, getResources().getString(R.string.success));
         }
     }
 
-    private void openCameraGallery() {
+    private void openCameraOrGallery() {
 
         ImagePickerDialog.dialogToChooseImage(ProfileActivity.this, new ImageSelectedFrom() {
             @Override
@@ -158,6 +152,17 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
                 break;
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (view.getId() == R.id.submitData) {
+            dataValidation();
+        } else if (view.getId() == R.id.addProfileImage) {
+            openCameraOrGallery();
+        }
+
     }
 
 
