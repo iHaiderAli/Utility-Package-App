@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileLayout"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImg"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <Button
+                android:id="@+id/addProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/add_profile_photo"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:background="@color/gray_light_color"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:background="@drawable/rectangle_white"
+                android:hint="@string/uName"
+                android:inputType="text"
+                android:maxLength="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/brownColor"
+                android:textSize="@dimen/_12sdp"
+                android:importantForAutofill="auto" />
+
+            <EditText
+                android:id="@+id/userEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/rectangle_white"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/brownColor"
+                android:textSize="@dimen/_12sdp"
+                android:importantForAutofill="auto" />
+
+            <!--android:text="+17852464191"-->
+
+            <EditText
+                android:id="@+id/userPhoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/rectangle_white"
+                android:hint="@string/phoneHint"
+                android:inputType="phone"
+                android:maxLength="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/brownColor"
+                android:textSize="@dimen/_12sdp"
+                android:importantForAutofill="auto" />
+
+            <EditText
+                android:id="@+id/companyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/rectangle_white"
+                android:hint="@string/url"
+                android:inputType="textEmailAddress"
+                android:maxLength="40"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/brownColor"
+                android:textSize="@dimen/_12sdp"
+                android:importantForAutofill="auto" />
+
+            <Button
+                android:id="@+id/submitData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/submit"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

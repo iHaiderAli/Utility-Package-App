@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">UtilityPackageApp</string>
+
+    <string name="description"><![CDATA[We have included commonly used utility functions in this library that are listed below,
+        we will keep adding up more functions at the same place.
+        \n\n1. Mashmallow permissions.
+        \n2. Camera and Gallery image picker.
+        \n3. Input fields data validation.
+        \n4. Toast & Log messages.
+        \n5. Close keyboard on outside touch of edit text fields.
+        \n6. Non Swipeable ViewPager.
+        \n7. Square ImageView / RelativeLayout / ViewPager.
+        \n8. Square ImageView / RelativeLayout / ViewPager.
+        \n9. Time & Date Conversion methods.
+        \n10. Zoomable image view
+        \n\n
+        many more common utility methods coming soon…
+
+    ]]></string>
+
+    <string name="add_profile_photo">Add Profile Photo</string>
+    <string name="uName">User Name</string>
+    <string name="email">Email Address</string>
+    <string name="url">www.google.com</string>
+    <string name="phoneHint" tools:ignore="Typos">Phone (xxx xxx xxxx)</string>
+    <string name="submit">SUBMIT</string>
+
+</resources>
