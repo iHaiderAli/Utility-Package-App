@@ -2,14 +2,18 @@
 We have included commonly used utility functions in this library that are listed below and we will keep adding up more functions at the same place.
 
   1. Mashmallow permissions.
-  2. Zoomable image view
-  3. Toast & Log messages.
-  4. Camera and Gallery image picker.
-  5. Input fields data validation.
+  2. Camera and Gallery image picker.
+  3. Dymanic text / screen sizes 
+  4. Alert dialog with message / Options.
+  5. Zoomable image view
   6. Non Swipeable ViewPager.
   7. Square ImageView / RelativeLayout / ViewPager. 
   8. Close keyboard on outside touch of edit text fields.
   9. Time & Date Conversion methods.
+  10. Read Phone Contacts.
+  11. Toast & Log messages.
+  12. Internet connectivity check / Keyboad utils
+  13. Form input data validation.
 
   Many more common utility methods coming soon…
 
@@ -27,7 +31,7 @@ To get a Git project into your build you need to follow these steps.
  Step 2. Add the dependency
 
       dependencies {
-	     implementation 'com.github.iHaiderAli:Utility-Package-App:-SNAPSHOT'
+	   implementation 'com.github.iHaiderAli:Utility-Package-App:854a55d037'
       }
 
   
