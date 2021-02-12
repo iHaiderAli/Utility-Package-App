@@ -1,0 +1,12 @@
+
+*.lock
+
+*.bin
+
+.gradle/6.5/
+
+.gradle/buildOutputCleanup/
+
+.idea/
+
+*.iml

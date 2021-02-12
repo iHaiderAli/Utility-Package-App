@@ -29,14 +29,6 @@ public class ContactItem {
         return isChecked;
     }
 
-    public void setIsChecked(boolean isChecked) {
-        this.isChecked = isChecked;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
     public void setPhone(String phone) {
         this.phone = phone;
     }

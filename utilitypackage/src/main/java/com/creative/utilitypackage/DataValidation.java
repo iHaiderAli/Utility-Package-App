@@ -12,14 +12,30 @@ import java.util.regex.Pattern;
 
 public class DataValidation {
 
-    public static int isValidInput(String input) {
+    public static String isValidStringValue(String value) {
+        if (value == null || value.equals(Constants.NULL)) {
+            return "";
+        } else {
+            return value;
+        }
+    }
+
+    public static int isValidIntValue(Integer value) {
+        if (value == null) {
+            return 0;
+        } else {
+            return value;
+        }
+    }
+
+    public static int isValidInput(String input, int length) {
 
         int status = 0;
 
         if (TextUtils.isEmpty(input)) {
             status = 1;
             return status;
-        } else if (input.length() < 3) {
+        } else if (input.length() < length) {
             status = 2;
         }
 

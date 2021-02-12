@@ -16,8 +16,8 @@ import com.creative.utilitypackage.AppPermissons;
 import com.creative.utilitypackage.CloseSoftKeyBoardOnTouchOutside;
 import com.creative.utilitypackage.Constants;
 import com.creative.utilitypackage.DataValidation;
+import com.creative.utilitypackage.HelperFunctions;
 import com.creative.utilitypackage.ImagePickerDialog;
-import com.creative.utilitypackage.Message;
 import com.creative.utilitypackage.interfaces.ImageSelectedFrom;
 
 import java.util.ArrayList;
@@ -82,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         } else if (!validUrl) {
             companyAddress.setError(getResources().getString(R.string.enterUrl));
         } else {
-            Message.showMessage(this, getResources().getString(R.string.success));
+            HelperFunctions.showToast(this, getResources().getString(R.string.success));
         }
     }
 
@@ -116,14 +116,14 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 outputUri = ImagePickerDialog.createDirAndLaunchCamera(ProfileActivity.this);
             } else {
-                Message.showMessage(getApplicationContext(), getResources().getString(R.string.app_name));
+                HelperFunctions.showToast(getApplicationContext(), getResources().getString(R.string.app_name));
             }
 
         } else if (requestCode == Constants.ACTION_REQUEST_GALLERY) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 ImagePickerDialog.openGallery(ProfileActivity.this, 4, path, 15);
             } else {
-                Message.showMessage(getApplicationContext(), getResources().getString(R.string.app_name));
+                HelperFunctions.showToast(getApplicationContext(), getResources().getString(R.string.app_name));
             }
         }
     }
