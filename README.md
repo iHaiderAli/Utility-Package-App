@@ -27,7 +27,7 @@ To get a Git project into your build you need to follow these steps.
  Step 2. Add the dependency
 
       dependencies {
-              implementation 'com.github.iHaiderAli:Utility-Package-App:Tag'
+	     implementation 'com.github.iHaiderAli:Utility-Package-App:-SNAPSHOT'
       }
 
   
